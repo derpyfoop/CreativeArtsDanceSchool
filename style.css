@@ -1,0 +1,299 @@
+/* Small CSS reset */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eff0f1;
+}
+
+#crt {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    position: sticky;
+    top: 0%;
+    background-color: #FFD700;
+    text-align: center;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+#iconAndName {
+    display: flex;
+}
+
+#iconAndNameLink {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+#iconAndNameLink img {
+    border: solid black;
+    margin-right: 10px;
+}
+
+#headerLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#headerLinks a,
+a:visited {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border: solid transparent;
+    transition: .2s ease-in-out;
+}
+
+#headerLinks a:hover {
+    border: solid black;
+}
+
+#headerLinks a:active {
+    transform: translate(0px, 5px);
+}
+
+/* CONTENT */
+
+#content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+#title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFD700;
+}
+
+#titleText {
+    width: 25%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#sign-upBtn {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease;
+}
+
+#sign-upBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#sign-upBtn:active {
+    transform: translate(0px, 5px);
+}
+
+#ourSchool {
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(Images/layered-waves-haikei.svg);
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#ourSchoolText {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#ourTeachers {
+    width: 100%;
+    background-image: url(Images/Untitled\ design.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+}
+
+#teachers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+#teacherOne,
+#teacherTwo {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid #FFD700;
+    background-color: #fefdfd;
+}
+
+#teacherOne img,
+#teacherTwo img {
+    border-radius: 50%;
+    border: solid #FFD700;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#priceTable {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#priceTable thead tr {
+    background-color: #FFD700;
+    color: #ffffff;
+    text-align: left;
+}
+
+#priceTable th,
+#priceTable td {
+    padding: 12px 15px;
+}
+
+#priceTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Just so every even row has a different background color */
+#priceTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#priceTable tbody tr:last-of-type {
+    border-bottom: 2px solid #FFD700;
+}
+
+#priceTable tbody tr:hover {
+    color: #FFD700;
+}
+
+/* FOOTER */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #FFD700;
+    padding: 1em;
+    margin-top: auto;
+    color: black;
+    z-index: 1;
+}
+
+#footer a,
+#footer a:visited {
+    text-decoration: none;
+    color: #000000;
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: white;
+}
+
+#footer a:active {
+    transform: translate(0px, 3px);
+}
+
+@media screen and (max-width:720px) {
+    #headerText {
+        display: none;
+    }
+
+    #title {
+        flex-direction: column;
+    }
+
+    #title img {
+        width: 100%;
+    }
+
+    #titleText {
+        width: auto;
+    }
+
+    #ourSchool {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ourSchool img {
+        width: 100%;
+    }
+
+    #ourSchoolText {
+        width: auto;
+    }
+
+    #teachers {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #priceTable {
+        font-size: 0.8em;
+    }
+}
