@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matthew Ward">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/7abca8dfe666b95499df3af96bde2649-girl-dance-silhouette-svg.png"
+        type="image/x-icon">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        #formCrt {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
+
+        #formHead {
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: #FFD700;
+            padding: 30px;
+        }
+
+        #formCrt form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 2em;
+        }
+
+        #personalInfo {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2em;
+            gap: 1em;
+        }
+
+        #birthAndGender {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1em;
+            padding-bottom: 2em;
+        }
+
+        #genderInput {
+            display: flex;
+            gap: 1em;
+        }
+
+        #birthInput {
+            display: flex;
+            gap: 1em;
+        }
+
+        .btn {
+            float: left;
+            margin: 0 5px 0 0;
+            width: 70px;
+            height: 50px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .btn label,
+        .btn input {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .btn input[type="radio"] {
+            opacity: 0.011;
+            z-index: 100;
+        }
+
+        .btn label {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 90;
+            line-height: 1.8em;
+        }
+
+        input[type="radio"]+label {
+            color: black;
+        }
+
+        input[type="radio"]:checked+label,
+        input:checked+label::before {
+            background-color: #FFD700;
+            color: white;
+            border-color: #FFD700;
+        }
+
+        input,
+        input[type="radio"]+label,
+        input[type="checkbox"]+label:before,
+        select option,
+        select,
+        textarea {
+            width: 100%;
+            padding: 1em;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+        }
+
+        #classCrt {
+            padding-bottom: 2em;
+        }
+
+        #formBtns {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 2em;
+            gap: 1em;
+        }
+
+        #submit {
+            width: 15em;
+            height: 50px;
+            background-color: #FFD700;
+            border: solid #FFD700;
+            font-size: medium;
+            transition: 0.2s ease;
+        }
+
+        #submit:hover {
+            background-color: black;
+            border-color: black;
+            color: white;
+        }
+
+        #submit:active {
+            transform: translate(0px, 5px);
+        }
+
+        #reset {
+            width: 15em;
+            height: 50px;
+            background-color: black;
+            border: solid black;
+            color: white;
+            font-size: medium;
+            transition: 0.2s ease;
+        }
+
+        #reset:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #reset:active {
+            transform: translate(0px, 5px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="crt">
+        <div id="header">
+            <div id="iconAndName">
+                <a id="iconAndNameLink" href="index.html">
+                    <img src="Images/7abca8dfe666b95499df3af96bde2649-girl-dance-silhouette-svg.png" width="50px">
+                    <h1 id="headerText">Creative Arts Dance School</h1>
+                </a>
+            </div>
+
+            <div id="headerLinks">
+                <a href="index.html">Home</a>
+                <a href="signUp.html">Sign-Up</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="formCrt">
+                <div id="formHead">
+                    <h1>SIGN-UP FORM</h1>
+                    <h3>Please fill in the form below and we will contact you within 24 hours</h3>
+                </div>
+
+                <form action="mailto:classes@creativeartsdance.com" method="post">
+                    <h4>Personal Information</h4>
+                    <div id="personalInfo">
+                        <div>
+                            <label for="name">First Name</label>
+                            <input type="text" name="fName" id="fName" placeholder="First Name" required />
+                        </div>
+
+                        <div>
+                            <label for="name">Last Name</label>
+                            <input type="text" name="lName" id="lName" placeholder="Last Name" required />
+                        </div>
+
+                        <div>
+                            <label for="email">Email Address:</label>
+                            <input type="email" name="email" id="email" placeholder="YourEmail@Address.com" required />
+                        </div>
+
+                        <div>
+                            <label for="cphone">Cell Number:</label>
+                            <input type="tel" name="cphone" id="phone" placeholder="+1 (246) 000-0000" required />
+                        </div>
+                    </div>
+
+                    <div id="birthAndGender">
+                        <div id="birth">
+                            <h4>Date Of Birth</h4>
+                            <div id="birthInput">
+                                <input type="text" id="birthDay" placeholder="DD" maxlength="2" minlength="2"
+                                    required />
+                                <input type="text" id="birthMonth" placeholder="MM" maxlength="2" minlength="2"
+                                    required />
+                                <input type="text" id="birthYear" placeholder="YYYY" maxlength="4" minlength="4"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div id="gender">
+                            <h4>Gender</h4>
+                            <div id="genderInput">
+                                <div class="btn">
+                                    <input type="radio" name="gender" id="gender" value="male" required />
+                                    <label for="gender">Male</label>
+                                </div>
+                                <div class="btn">
+                                    <input type="radio" name="gender" id="gender" value="Female" required />
+                                    <label for="gender">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="classCrt">
+                        <label for="class">Class</label>
+                        <select name="class" id="class" required>
+                            <option value="Hip-Hop Fusion">Hip-Hop Fusion</option>
+                            <option value="Ballet Basics">Ballet Basics</option>
+                            <option value="Salsa Sizzle">Salsa Sizzle</option>
+                            <option value="Contemporary	">Contemporary </option>
+                            <option value="Ballroom Waltz">Ballroom Waltz</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="Questions">Questions or Comments</label>
+                        <textarea name="Questions" id="" cols="30" rows="10"
+                            placeholder="Please ask or input and questions or comments here!"></textarea>
+                    </div>
+
+                    <div id="formBtns">
+                        <input type="submit" id="submit" value="Send Email" />
+                        <input type="reset" id="reset" value="Reset" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="footer">
+            <h3>The Creative Arts Dance School</h3>
+            <h4>Tel:<a href="tel: (246) 426-0774"> (246) 426-0774</a></h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ html {
     width: 100%;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    background-color: #eff0f1;
+    background-color: white;
 }
 
 #crt {
@@ -228,7 +228,6 @@ a:visited {
 #priceTable tbody tr:hover {
     color: #FFD700;
 }
-
 /* FOOTER */
 
 #footer {
@@ -295,5 +294,13 @@ a:visited {
 
     #priceTable {
         font-size: 0.8em;
+    }
+
+    #birthInput {
+        flex-wrap: wrap;
+    }
+
+    #formCrt form {
+        width: 100%;
     }
 }
