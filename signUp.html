@@ -209,29 +209,29 @@
                     <h4>Personal Information</h4>
                     <div id="personalInfo">
                         <div>
-                            <label for="name">First Name</label>
+                            <label for="name">*First Name:</label>
                             <input type="text" name="fName" id="fName" placeholder="First Name" required />
                         </div>
 
                         <div>
-                            <label for="name">Last Name</label>
+                            <label for="name">*Last Name:</label>
                             <input type="text" name="lName" id="lName" placeholder="Last Name" required />
                         </div>
 
                         <div>
-                            <label for="email">Email Address:</label>
+                            <label for="email">*Email Address:</label>
                             <input type="email" name="email" id="email" placeholder="YourEmail@Address.com" required />
                         </div>
 
                         <div>
-                            <label for="cphone">Cell Number:</label>
+                            <label for="cphone">*Cell Number:</label>
                             <input type="tel" name="cphone" id="phone" placeholder="+1 (246) 000-0000" required />
                         </div>
                     </div>
 
                     <div id="birthAndGender">
                         <div id="birth">
-                            <h4>Date Of Birth</h4>
+                            <h4>*Date Of Birth</h4>
                             <div id="birthInput">
                                 <input type="text" id="birthDay" placeholder="DD" maxlength="2" minlength="2"
                                     required />
@@ -243,7 +243,7 @@
                         </div>
 
                         <div id="gender">
-                            <h4>Gender</h4>
+                            <h4>*Gender</h4>
                             <div id="genderInput">
                                 <div class="btn">
                                     <input type="radio" name="gender" id="gender" value="male" required />
@@ -258,8 +258,9 @@
                     </div>
 
                     <div id="classCrt">
-                        <label for="class">Class</label>
+                        <label for="class">*Class</label>
                         <select name="class" id="class" required>
+                            <option value="">Select Class</option>
                             <option value="Hip-Hop Fusion">Hip-Hop Fusion</option>
                             <option value="Ballet Basics">Ballet Basics</option>
                             <option value="Salsa Sizzle">Salsa Sizzle</option>

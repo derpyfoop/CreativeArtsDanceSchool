@@ -278,7 +278,11 @@ a:visited {
     #ourSchool {
         flex-direction: column;
         align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 30px;
     }
+
 
     #ourSchool img {
         width: 100%;
